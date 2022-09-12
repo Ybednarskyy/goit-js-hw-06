@@ -10,14 +10,14 @@ const destroyBtnRef = document.querySelector("[data-destroy]");
 createBtnRef.addEventListener("click", createBoxes);
 destroyBtnRef.addEventListener("click", removeBoxes);
 
-function createBoxes(number) {
-  number = amountBoxesRef.value;
+function createBoxes() {
+  const amount = amountBoxesRef.value;
+  const size = 30;
 
-  let size = 30;
-  if (!number) {
+  if (!amount) {
     alert("Choose amount");
   } else {
-    for (let index = 0; index < number; index++) {
+    for (let index = 0; index < amount; index++) {
       const box = document.createElement("div");
       box.style.width = `${size + index * 10}px`;
       box.style.height = `${size + index * 10}px`;
