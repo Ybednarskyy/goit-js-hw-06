@@ -11,9 +11,9 @@ inputRef.addEventListener("blur", () => {
     inputRef.classList.remove("invalid");
   }
 
-  if (inputRef.value.length < dataLengthRef) {
-    inputRef.classList.add("invalid");
-  } else {
+  if (inputRef.value.length == dataLengthRef) {
     inputRef.classList.add("valid");
+  } else {
+    inputRef.classList.add("invalid");
   }
 });

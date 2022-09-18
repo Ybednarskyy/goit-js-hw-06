@@ -6,6 +6,6 @@ console.log(changingTextRef);
 
 changingTextRef.style.fontSize = `${fontSizeControlRef.value}px`;
 
-fontSizeControlRef.addEventListener("change", () => {
+fontSizeControlRef.addEventListener("input", () => {
   changingTextRef.style.fontSize = `${fontSizeControlRef.value}px`;
 });
